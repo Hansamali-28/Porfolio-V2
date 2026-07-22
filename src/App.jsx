@@ -12,6 +12,7 @@ import './App.css'
 
 function App() {
   return (
+  <>
     <div className="app">
       <Header />
       <main>
@@ -23,8 +24,10 @@ function App() {
         <Education />
         <Contact />
       </main>
-      <Footer />
     </div>
+    
+    <Footer />
+  </>
   )
 }
 

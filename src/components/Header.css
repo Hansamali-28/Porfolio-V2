@@ -1,88 +1,165 @@
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
   z-index: 1000;
+
   padding: 1rem 2rem;
-  transition: all 0.3s ease;
-  background: transparent;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -40%;
+  width: 220px;
+  height: 300%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+
+  transform: rotate(25deg);
+  pointer-events: none;
 }
 
 .header.scrolled {
-  background: rgba(10, 10, 26, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  padding: 0.8rem 2rem;
+  background: rgba(15, 23, 42, 0.65);
+
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  border: 1px solid rgba(124, 58, 237, 0.2);
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(124, 58, 237, 0.15);
+
+  padding: 0.85rem 2rem;
 }
 
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
   display: flex;
   align-items: center;
+
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
 .logo-text {
-  background: linear-gradient(135deg, #4a90d9, #7c3aed);
+  background: linear-gradient(
+    135deg,
+    #60a5fa,
+    #a855f7,
+    #ec4899
+  );
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
 }
 
 .logo-dot {
-  color: #7c3aed;
-  -webkit-text-fill-color: #7c3aed;
+  color: #a855f7;
+  margin-left: 2px;
 }
 
 .nav {
   display: flex;
-  gap: 2rem;
   align-items: center;
+  gap: 0.8rem;
 }
 
 .nav-link {
-  color: #e0e0e0;
+  position: relative;
+
+  color: #f1f5f9;
+  text-decoration: none;
+
   font-size: 0.95rem;
   font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
-  padding: 0.5rem 0;
-}
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(135deg, #4a90d9, #7c3aed);
-  transition: width 0.3s ease;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #7c3aed;
+  color: white;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+
+  width: 0;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    135deg,
+    #60a5fa,
+    #a855f7
+  );
+
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
-  width: 100%;
+  width: 70%;
 }
 
 .mobile-toggle {
   display: none;
+
   flex-direction: column;
   gap: 5px;
-  background: none;
+
+  background: transparent;
   border: none;
+
   cursor: pointer;
   padding: 5px;
 }
@@ -90,9 +167,12 @@
 .bar {
   width: 25px;
   height: 3px;
-  background: #e0e0e0;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
   transition: all 0.3s ease;
-  border-radius: 2px;
 }
 
 .bar.active:nth-child(1) {
@@ -108,30 +188,56 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    width: 95%;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
   .mobile-toggle {
     display: flex;
   }
 
   .nav {
     position: absolute;
-    top: 100%;
+
+    top: calc(100% + 10px);
     left: 0;
     right: 0;
-    background: rgba(10, 10, 26, 0.98);
+
     flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
+
+    padding: 1.8rem;
+
+    border-radius: 18px;
+
+    background: rgba(15, 23, 42, 0.85);
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
     transform: translateY(-150%);
-    transition: transform 0.3s ease;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(74, 144, 217, 0.1);
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: all 0.4s ease;
   }
 
   .nav.open {
     transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
   }
 
   .nav-link {
-    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
   }
 }
