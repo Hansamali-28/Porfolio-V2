@@ -1,66 +1,112 @@
+.education {
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
 .education-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
+.education-header {
+  display: block;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+
+  gap: 2rem;
+
+  margin-top: 3rem;
+}
+
 
 .education-card {
+
+  flex: 1;
+
   padding: 2rem;
-  background: rgba(74, 144, 217, 0.03);
-  border-radius: 12px;
-  border: 1px solid rgba(74, 144, 217, 0.08);
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
   transition: all 0.3s ease;
+
 }
+
 
 .education-card:hover {
-  border-color: rgba(74, 144, 217, 0.2);
-}
 
-.education-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
+  transform: translateY(-8px);
 
+  border-color: rgba(168,85,247,0.4);
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,0.25);
+
+}
 .education-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #e0e0e0;
-}
+  font-size: 1.4rem;
+  font-weight: 800;
 
+  line-height: 1.4;
+
+  margin-bottom: 0.8rem;
+
+  background: linear-gradient(
+    135deg,
+    #60a5fa,
+    #a855f7
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .education-institution {
-  color: #a0a0b0;
   font-size: 1rem;
-}
 
-.education-year {
-  padding: 0.3rem 1rem;
-  background: rgba(74, 144, 217, 0.08);
-  border-radius: 50px;
-  font-size: 0.85rem;
-  color: #4a90d9;
-}
+  color: #cbd5e1;
 
-.education-description {
-  color: #b0b0c0;
-  line-height: 1.6;
   margin-bottom: 1rem;
-}
 
-.education-highlights {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  font-weight: 500;
 }
+.education-year {
 
-.highlight-tag {
-  padding: 0.3rem 1rem;
-  background: rgba(124, 58, 237, 0.08);
-  border: 1px solid rgba(124, 58, 237, 0.15);
+  display: inline-block;
+
+  padding: 0.4rem 1rem;
+
   border-radius: 50px;
+
+  background: rgba(96,165,250,0.12);
+
+  border: 1px solid rgba(96,165,250,0.2);
+
+  color: #93c5fd;
+
   font-size: 0.85rem;
-  color: #c0c0d0;
+
+  margin-bottom: 1.2rem;
+}
+.education-description {
+
+  color: #cbd5e1;
+
+  line-height: 1.7;
+
+  font-size: 0.95rem;
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  padding-top: 1rem;
 }
