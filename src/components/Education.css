@@ -3,19 +3,16 @@
   padding: 5rem 0;
 }
 
-.education-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.education-header {
-  display: block;
-}
 
+/* Desktop layout */
 .education-container {
+
   display: flex;
+
   flex-direction: row;
+
   justify-content: center;
+
   align-items: stretch;
 
   gap: 2rem;
@@ -54,13 +51,29 @@
   0 15px 35px rgba(0,0,0,0.25);
 
 }
+
+
+/* Header */
+.education-header {
+
+  display: block;
+
+  margin-bottom: 1.2rem;
+
+}
+
+
+/* Title */
 .education-title {
+
   font-size: 1.4rem;
+
   font-weight: 800;
 
   line-height: 1.4;
 
   margin-bottom: 0.8rem;
+
 
   background: linear-gradient(
     135deg,
@@ -68,10 +81,17 @@
     #a855f7
   );
 
+
   -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
+
 }
+
+
+/* University */
 .education-institution {
+
   font-size: 1rem;
 
   color: #cbd5e1;
@@ -79,7 +99,11 @@
   margin-bottom: 1rem;
 
   font-weight: 500;
+
 }
+
+
+/* Year */
 .education-year {
 
   display: inline-block;
@@ -88,16 +112,22 @@
 
   border-radius: 50px;
 
+
   background: rgba(96,165,250,0.12);
 
   border: 1px solid rgba(96,165,250,0.2);
+
 
   color: #93c5fd;
 
   font-size: 0.85rem;
 
   margin-bottom: 1.2rem;
+
 }
+
+
+/* Description */
 .education-description {
 
   color: #cbd5e1;
@@ -109,4 +139,50 @@
   border-top: 1px solid rgba(255,255,255,0.08);
 
   padding-top: 1rem;
+
+}
+
+
+/* Mobile View */
+@media (max-width: 900px) {
+
+
+  .education-container {
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+  }
+
+
+  .education-card {
+
+    width: 100%;
+
+    padding: 1.5rem;
+
+  }
+
+
+  .education-title {
+
+    font-size: 1.15rem;
+
+  }
+
+
+  .education-institution {
+
+    font-size: 0.9rem;
+
+  }
+
+
+  .education-description {
+
+    font-size: 0.9rem;
+
+  }
+
 }
