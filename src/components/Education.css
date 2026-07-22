@@ -1,0 +1,66 @@
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education-card {
+  padding: 2rem;
+  background: rgba(74, 144, 217, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(74, 144, 217, 0.08);
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  border-color: rgba(74, 144, 217, 0.2);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.education-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.education-institution {
+  color: #a0a0b0;
+  font-size: 1rem;
+}
+
+.education-year {
+  padding: 0.3rem 1rem;
+  background: rgba(74, 144, 217, 0.08);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: #4a90d9;
+}
+
+.education-description {
+  color: #b0b0c0;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.education-highlights {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.highlight-tag {
+  padding: 0.3rem 1rem;
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: #c0c0d0;
+}
